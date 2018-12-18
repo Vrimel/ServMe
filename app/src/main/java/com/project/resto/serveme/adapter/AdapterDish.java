@@ -6,15 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.resto.serveme.R;
+import com.project.resto.serveme.entity.Dish;
 import com.project.resto.serveme.viewholder.ViewDish;
 
 import java.util.List;
 
 public class AdapterDish extends RecyclerView.Adapter<ViewDish> {
 
-    private List<String> lst_Dish;
+    private List<Dish> lst_Dish;
 
-    public AdapterDish(List<String> lst_Dish) {
+    public AdapterDish(List<Dish> lst_Dish) {
         this.lst_Dish = lst_Dish;
     }
 
@@ -24,10 +25,10 @@ public class AdapterDish extends RecyclerView.Adapter<ViewDish> {
         return new ViewDish(view);
     }
 
-    //c'est ici que nous allons remplir notre cellule avec le texte/image de chaque MyObjects
+
     @Override
     public void onBindViewHolder(ViewDish myViewHolder, int position) {
-        String plat = lst_Dish.get(position);
+        String plat = lst_Dish.get(position).getName();
         myViewHolder.bind(plat);
     }
 
