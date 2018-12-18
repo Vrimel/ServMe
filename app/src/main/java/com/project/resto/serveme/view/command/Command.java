@@ -30,6 +30,7 @@ public class Command extends AppCompatActivity {
 
     }
 
+    //Create list of dish
     private void fill_Dish(List<String> lst_Dish) {
         lst_Dish.add( getString(R.string.dish1));
         lst_Dish.add( getString(R.string.dish2));
