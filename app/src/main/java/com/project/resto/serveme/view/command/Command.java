@@ -28,9 +28,14 @@ public class Command extends AppCompatActivity {
 
         rv_Plat.setAdapter(new AdapterDish(lst_Dish));
 
+        //TODO event séléction de l'objet
+
     }
 
     //Create list of dish
+    //TODO ajout des images
+    //TODO ajout des prix
+    //TODO ajout des "titres" de colonne
     private void fill_Dish(List<Dish> lst_Dish) {
         lst_Dish.add( new Dish(getString(R.string.dish1),""));
         lst_Dish.add( new Dish(getString(R.string.dish2),""));
